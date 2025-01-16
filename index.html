@@ -1,0 +1,179 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>cvel</title>
+    <link rel="stylesheet" href="style.css">
+    
+    <!-- Dodaj favicon w formacie .jpg -->
+    <link rel="icon" type="image/jpeg" href="favicon.jpg">
+</head>
+<body>
+
+    <!-- Tło z wideo -->
+    <div class="background-video">
+        <video autoplay muted loop id="bg-video">
+            <source src="tlo.mp4" type="video/mp4">
+        </video>
+    </div>
+
+    <!-- Główna zawartość strony -->
+    <div class="content" id="main-content">
+        <header class="header-container">
+            <h1></h1>
+        </header>
+
+        <section class="cta">
+            <a href="#" class="btn" id="start-button">Start</a>
+        </section>
+    </div>
+
+    <!-- HUD z zakładkami -->
+    <div class="hud" id="hud" style="display: none;">
+        <div class="tabs">
+            <button class="tab" onclick="changeTabWithAnimation('main')">💀</button>
+            <button class="tab" onclick="changeTabWithAnimation('tab1')">𝟏</button>
+            <button class="tab" onclick="changeTabWithAnimation('tab2')">𝟐</button>
+            <button class="tab" onclick="changeTabWithAnimation('tab3')">𝟑</button>
+            <button class="tab" onclick="changeTabWithAnimation('tab4')">𝟒</button>
+            <button class="tab" onclick="changeTabWithAnimation('tab5')">𝟓</button>
+            <button class="tab" onclick="changeTabWithAnimation('tab6')">𝟔</button>
+            <button class="tab kliknij-tab" onclick="changeTabWithAnimation('jumpscare')">💀</button>
+        </div>
+        
+        <div class="tab-content">
+            <div id="main" class="tab-pane active">
+                <h2>Hej jestem Natalia i jestem dziwką</h2>
+                <br>
+                <dev><dev>
+            </div>
+
+            <div id="tab1" class="tab-pane" style="width: 400px; height: 00px;">
+                <img src="images/leak1.jpg" id="leak4-image" class="media-preview" style="width: 100%; height: auto;">
+                <div id="tab1-description">
+                    <p>Imię: Kevin</p>
+                    <p>Nazwisko: Patla</p>
+                    <p>Numer Telefonu: 665 419 029</p>
+                    <p>FB: https://www.facebook.com/profile.php?id=61552496065414</p>  
+                    <br>
+                    <h2>Kevinek</h2>
+                </div>
+            </div>
+
+            <div id="tab2" class="tab-pane" style="width: 400px; height: 00px;">
+                <img src="images/leak2.jpg" id="leak4-image" class="media-preview" style="width: 70%; height: auto;">
+                <div id="tab2-description">
+                    <p>Imię: Igor</p>
+                    <p>Nazwisko: Haluszczak</p>
+                    <p>Numer Telefonu: 513 221 696</p>
+                    <p>FB: https://www.facebook.com/profile.php?id=100092254642439</p>
+                    </p>Miejsce zamieszkania: Lidzbark Warmiński</p>
+                    </p>IP:37.47.217.148</p>
+                    </p>Mail:ospektop@wp.pl</p>
+                    <br>
+                    <h2>Ospek29<h2>
+                </div>
+            </div>
+
+            <div id="tab3" class="tab-pane">
+                <img src="images/leak3.jpg" id="leak3-image" class="media-preview">
+                <div id="tab3-description">
+                    <p>Imię:Szymon</p>
+                    <p>Nazwisko:Dulik</p>
+                    <p>Numer Telefonu:791 965 458</p>
+                    <p>FB:https://www.facebook.com/profile.php?id=100083178634407</p>
+                    </p>Miejsce zamieszkania:Podkarpacie, Rzeszów, Jaślany-388</p>
+                    </p>Imię Ojca:Wiesław</p>
+                    </p>Imię Matki:Ewa</p>
+                    </p>Numer Ojca:702 505 841</p>
+                    </p>Numer Matki:535 835 741</p>
+                    </p>Profil Facebook Ojca:https://www.facebook.com/dulikwieslaw/about</p>
+                    </p>Profil Facebook Matki:https://www.facebook.com/ewa.dulik.35</p>
+                    </p>Zdjęcie Ojca: ttps://imgur.com/a/TWy4AUB</p>
+                    </p>Zdjęcie Ojca:https://imgur.com/a/TWy4AUB</p>
+                    <br>
+                    <h2>Kasztan</h2>
+                </div>
+            </div>
+
+            <div id="tab4" class="tab-pane" style="width: 400px; height: 00px;">
+                <img src="images/leak4.png" id="leak4-image" class="media-preview" style="width: 100%; height: auto;">
+                <div id="tab3-description" style="width: 100%; height: auto;">
+                    <h2>Piotr Szpyt</h2>
+                    <p><a href="facebook.com/profile.php?id=100089200883094" target="_blank">Facebook</a></p>
+                    <p><a href="https://www.instagram.com/pio1666/" target="_blank">IG</a></p>
+                    <p>Numer telefonu: +48 691 507 725</p>
+                    <p>Miejsce zamieszkania: Cmolas, 40, stara, 36-105</p>
+                    <p><a href="https://www.facebook.com/magicszpyt" target="_blank">Facebook matki</a></p>
+                    <p><a href="https://www.facebook.com/slawomir.szpyt?__tn__=" target="_blank">Facebook ojca</a></p>
+                </div>
+            </div>
+            
+            <div id="tab5" class="tab-pane" style="width: 200px; height: 00px;">
+                <img src="images/leak5.jpg" id="leak4-image" class="media-preview" style="width: 100%; height: auto;">
+                <div id="tab3-description" style="width: 100%; height: auto;">
+                    <p>Imię: Hubert</p>
+                    <p>Nazwisko: Budzyński</p>
+                    <p><a href="https://www.instagram.com/hub.sik/" target="_blank">Instagram</a></p>
+                    <p><a href="https://www.facebook.com/profile.php?id=61552496065414" target="_blank">Facebook</a></p>
+                    <br>
+                    <h2>Hubsik<h2>
+                </div>
+            </div>
+          
+            <div id="tab6" class="tab-pane" style="width: 300px; height: 00px;">
+                <img src="images/leak7.jpg" id="leak4-image" class="media-preview" style="width: 100%; height: auto;">
+                    <p><a href="https://www.facebook.com/profile.php?id=100054186885291" target="_blank">Fejsbook</a></p>
+                    <p><a href="https://www.instagram.com/michalr192/" target="_blank">Instagram</a></p>
+                    <p>Numer telefonu: +48 794 593 987</p>
+                    <p>Miejsce zamieszkania: Jaślany 202, 39-334</p>
+                    <p><a href="https://steamcommunity.com/profiles/76561199543099198/" target="_blank">Steam</a><p>
+                    <p>Discord ID: 968149575586156574</p>
+                    <br>
+                    <h2>gompka1234</h2>
+                </div>
+            </div>
+
+            <div id="jumpscare" class="tab-pane" style="
+            position: fixed;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            text-align: center;">
+            <p style="font-size: 58px;">Website Creators</p>
+            <br>
+            <p style="font-size: 24px; color: rgb(238, 255, 0);">👑 cvel69</p>
+            <br>
+            <p style="font-size: 24px; color: rgb(255, 0, 0);">😈 Goferq</p>
+            <br>
+            <p style="font-size: 24px; color: rgb(255, 255, 255);">💀 bingusowskii</p>
+            <br>
+            <iframe width="700" height="300" src="https://www.youtube.com/embed/S-KAdxwA06Y" title="Zmadowany dzieciak o wyjebke" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+        </div>
+        
+
+    <!-- Animowany napis -->
+<div id="animated-text-container">
+    <span id="animated-text">Igor Hałuszczak syn cwela</span>
+</div>
+
+    <!-- Tło muzyczne z pliku audio -->
+    <audio id="background-music" loop></audio>
+
+    <!-- Ikona linku w lewym dolnym rogu -->
+<div id="icon-link" class="icon-link">
+    <a href="https://discord.gg/xUw2XJqndt" target="_blank">
+        <img src="ikona.png" alt="Ikona" class="icon-img">
+    </a>
+</div>
+
+
+    <footer>
+        <p></p>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>

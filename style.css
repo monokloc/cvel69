@@ -1,0 +1,237 @@
+/* Resetowanie domyślnych stylów */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Tło z wideo */
+.background-video {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+}
+
+#bg-video {
+    object-fit: cover;
+    width: 100%;
+    height: 100%;
+    filter: blur(8px);
+}
+
+/* Główna zawartość strony */
+.content {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+    z-index: 1;
+    color: #fff;
+}
+
+/* Przycisk CTA */
+.cta .btn {
+    display: inline-block;
+    padding: 15px 30px;
+    background-color: #000000; /* Czerwony kolor */
+    color: white;
+    text-decoration: none;
+    border-radius: 50px;
+    font-size: 1.2em;
+    text-transform: uppercase;
+    box-shadow: 0 5px 15px rgba(255, 255, 255, 0.2);
+    margin-top: 30px;
+    transition: background-color 0.3s, transform 0.3s;
+}
+
+.cta .btn:hover {
+    background-color: #000000; /* Ciemniejszy czerwony */
+    transform: translateY(-5px);
+}
+
+/* HUD - Nowy interfejs z zakładkami */
+.hud {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start;
+    color: #fff;
+    background: rgba(0, 0, 0, 0.7);
+    padding-top: 50px;
+    animation: fadeIn 2s ease-out;
+}
+
+.tabs {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 20px;
+}
+
+.tab {
+    background: hsl(0, 0%, 0%); /* Czerwony kolor */
+    padding: 15px 30px;
+    border-radius: 50px;
+    color: white;
+    border: none;
+    font-size: 1.2em;
+    margin: 0 10px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.tab:hover {
+    background-color: #3a3a3a; /* Ciemniejszy czerwony */
+}
+
+.tab-content {
+    width: 80%;
+    max-width: 800px;
+    display: flex;
+    justify-content: space-around;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+}
+
+.tab-pane {
+    display: none;
+    animation: fadeIn 1s ease-out;
+}
+
+.tab-pane.active {
+    display: block;
+}
+
+/* Animacja przesuwania w górę przy wyjściu */
+@keyframes slideOut {
+    from {
+        transform: translateY(0);
+        opacity: 1;
+    }
+    to {
+        transform: translateY(-100%);
+        opacity: 0;
+    }
+}
+
+.slide-out {
+    animation: slideOut 0.5s forwards;
+}
+
+/* Animacja przesuwania z dołu przy wejściu */
+@keyframes slideIn {
+    from {
+        transform: translateY(100%);
+        opacity: 0;
+    }
+    to {
+        transform: translateY(0);
+        opacity: 1;
+    }
+}
+
+.slide-in {
+    animation: slideIn 0.5s forwards;
+}
+
+/* Stopka */
+footer {
+    position: absolute;
+    bottom: 20px;
+    width: 100%;
+    text-align: center;
+    color: #fff;
+    font-size: 1.1em;
+    z-index: 1;
+}
+
+/* Wygładzenie krawędzi obrazów i filmów oraz animacja powiększenia */
+.media-preview {
+    border-radius: 15px; /* Zaokrąglone krawędzie dla zdjęć i filmów */
+    transition: transform 0.3s ease, filter 0.3s ease; /* Płynna animacja powiększania */
+}
+
+.media-preview:hover {
+    transform: scale(1.05); /* Powiększenie elementu */
+    filter: brightness(1.1); /* Efekt rozjaśnienia przy najechaniu */
+}
+
+/* Animowany napis na dole strony */
+#animated-text-container {
+    position: fixed;
+    bottom: 20px;
+    left: 50%;
+    transform: translateX(-50%);
+    font-size: 2em;
+    color: white;
+    text-align: center;
+    animation: slideUp 5s ease-in-out infinite, colorChange 2s ease-in-out infinite;
+}
+
+/* Animacja przesuwania napisu w górę */
+@keyframes slideUp {
+    0% {
+        transform: translate(-50%, 100%);
+    }
+    50% {
+        transform: translate(-50%, -40%);
+    }
+    100% {
+        transform: translate(-50%, 100%);
+    }
+}
+
+/* Animacja zmiany koloru tekstu */
+@keyframes colorChange {
+    0% {
+        color: rgb(0, 0, 0);
+    }
+    50% {
+        color: #ffffff; /* Czerwony */
+    }
+    100% {
+        color: rgb(0, 0, 0);
+    }
+}
+
+/* Ikona w lewym dolnym rogu */
+.icon-link {
+    position: fixed;
+    bottom: 20px;
+    left: 20px;
+    background-color: rgba(0, 0, 0, 0.7); /* Lekko przezroczyste tło */
+    border-radius: 50%;
+    padding: 10px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.5);
+    transition: transform 0.3s ease;
+}
+
+.icon-link:hover {
+    transform: scale(1.1) rotate(360deg); /* Powiększanie ikony i obrót o 360 stopni */
+    animation: rotateIcon 0.5s ease-in-out;
+}
+
+.icon-img {
+    width: 40px; /* Rozmiar ikony */
+    height: 40px;
+    border-radius: 50%;
+}
+
+/* Animacja obrotu ikony */
+@keyframes rotateIcon {
+    0% {
+        transform: rotate(0deg);
+    }
+    100% {
+        transform: rotate(360deg);
+    }
+}
